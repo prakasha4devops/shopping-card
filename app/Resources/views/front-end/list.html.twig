@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <table class="table table-striped">
+                    <tr>
+                        <th>producyt name</th>
+                        <th> product description</th>
+                        <th>price</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    {% for product in products %}
+                        <tr>
+                            <th>{{ product.name }}</th>
+                            <th>{{ product.description }}</th>
+                            <th>{{ product.price }}</th>
+                            <th> &nbsp;
+                                <a href="{{ path('product_details', {'id': product.id}) }}">
+                                    product details
+                                </a>
+                            </th>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

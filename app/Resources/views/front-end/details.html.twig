@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <dt>Product Name:</dt>
+                <dd> {{ product.name }}</dd>
+                <dt>Description :</dt>
+                <dd>{{ product.description }}</dd>
+                <dt> price:</dt>
+                <dd>{{ product.price }}</dd>
+            </div>
+        </div>
+    </div>
+{% endblock %}
